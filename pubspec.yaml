@@ -55,6 +55,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -62,7 +63,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assetss/image/mask.png
+    - assets/mask.png
+    
 
   # To add assets to your application, add an assets section, like this:
   # assets:
