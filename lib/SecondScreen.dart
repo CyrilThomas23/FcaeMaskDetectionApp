@@ -1,4 +1,6 @@
+import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
@@ -96,12 +98,13 @@ class _HomeState extends State<Home> {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.cyanAccent,
+      backgroundColor: Color.fromARGB(255, 252, 252, 252),
       appBar: AppBar(
-         backgroundColor: Color(0xff0096FF),
+        
+         backgroundColor: Color.fromARGB(255, 19, 19, 19),
         title: Center(
           child: Text(
-            'MASK DETECTOR',
+            'TRINETRA',
           ),
         ),
         
@@ -142,37 +145,39 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-            SizedBox(
-              height: 100,
+           
+            
+             Column(
+               children: [
+                 SizedBox( 
+                    height:(h/2)-28, 
+                     width:double.infinity,
+            child: ElevatedButton(
+                  child: const Text('OBJECT DETECTION'),
+                  onPressed: 
+                  getImageFromCamera,
+                  style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 0, 0, 0),)
             ),
-            Stack(
-              children: [
-                Align(
-                  alignment: Alignment(-0.5, 0.8),
-                  child: 
-                  FloatingActionButton(
-                    elevation: 0.0,
-                    child: new Icon(
-                      Icons.image,
-                    ),
-                    backgroundColor: Colors.white,
-                    onPressed: getImageFromGallery,
-                  ),
-                  
-                ),
-                Align(
-                  alignment: Alignment(0.5, 0.8),
-                  child: FloatingActionButton(
-                    elevation: 0.0,
-                    child: new Icon(
-                      Icons.camera,
-                    ),
-                    backgroundColor: Colors.white,
-                    onPressed: getImageFromCamera,
-                  ),
-                ),
-              ],
-            )
+            ),
+               ],
+             ),
+            SizedBox( 
+                height:(h/2)-28, 
+                 width:double.infinity,
+            child: ElevatedButton(
+              child: const Text('CURRENCY DETECTION'),
+              onPressed: getImageFromCamera,
+              style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 7, 7, 7),)
+            ),
+            ),
+          
+            
+            
+
+                
+      
           ],
         ),
       ),

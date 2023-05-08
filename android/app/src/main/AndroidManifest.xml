@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mask_app">
+    <uses-permission android:name="android.permission.VIBRATE" />
    <application
         android:label="mask_app"
         android:name="${applicationName}"
